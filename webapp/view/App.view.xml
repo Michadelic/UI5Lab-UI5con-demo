@@ -1,0 +1,62 @@
+<mvc:View
+	controllerName="ui5lab.app.QRLabApp.controller.App"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:lab="it.designfuture.qrcode">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+						<l:VerticalLayout
+								class="sapUiContentPadding"
+								width="100%">
+							<l:content>
+								<ProgressIndicator
+										id="ProgressIndicator0"
+										class="sapUiSmallMarginBottom"
+										percentValue="{view>/data0}"
+										showValue="true"
+										state="None" />
+								<ProgressIndicator
+										id="ProgressIndicator1"
+										class="sapUiSmallMarginBottom"
+										percentValue="{view>/data1}"
+										showValue="false"
+										state="Error" />
+								<ProgressIndicator
+										id="ProgressIndicator2"
+										class="sapUiSmallMarginBottom"
+										percentValue="{view>/data2}"
+										showValue="false"
+										state="Success" />
+								<ProgressIndicator
+										id="ProgressIndicator3"
+										class="sapUiSmallMarginBottom"
+										percentValue="{view>/data3}"
+										showValue="false"
+										state="Warning" />
+								<HBox justifyContent="Center">
+									<Image  src="labpic.jpg" width="200px" visible="{=!${view>/buttonClicked}}"/>
+									<lab:QRCode
+											id="customQRCode"
+											text="https://github.com/UI5Lab/UI5Lab-central"
+											width="200px"
+											height="200px"
+											colorDark="#5E696E"
+											colorLight="#FAFAFA"
+											visible="{view>/buttonClicked}"/>
+								</HBox>
+								<FlexBox height ="50px" alignItems="Center" justifyContent="Center" visible="{view>/buttonClicked}"	>
+									<Label text="Visit: https://github.com/UI5Lab/UI5Lab-central" design="Bold"/>
+								</FlexBox>
+								<HBox justifyContent="Center">
+									<Button text="Take me to the UI5Lab!" icon="sap-icon://lab" type="Emphasized" width ="200px" press="buttonPressed" visible="{=!${view>/buttonClicked}}"/>
+								</HBox>
+							</l:content>
+						</l:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

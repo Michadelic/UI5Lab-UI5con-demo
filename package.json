@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "node postInstall.js"
+  },
+  "devDependencies": {
+    "openui5-qrcode": "^0.0.1",
+    "fs-extra": "^3.0.0"
+  }
+}
