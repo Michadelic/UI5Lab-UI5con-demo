@@ -37,7 +37,7 @@
 										showValue="false"
 										state="Warning" />
 								<HBox justifyContent="Center">
-									<Image  src="labpic.jpg" width="200px" visible="{=!${view>/buttonClicked}}"/>
+									<!-- lab experiment starts here -->
 									<lab:QRCode
 											id="customQRCode"
 											text="https://github.com/UI5Lab/UI5Lab-central"
@@ -51,7 +51,7 @@
 									<Label text="Visit: https://github.com/UI5Lab/UI5Lab-central" design="Bold"/>
 								</FlexBox>
 								<HBox justifyContent="Center">
-									<Button text="Take me to the UI5Lab!" icon="sap-icon://lab" type="Emphasized" width ="200px" press="buttonPressed" visible="{=!${view>/buttonClicked}}"/>
+									<Button text="Take me to the Lab!" icon="sap-icon://lab" type="Emphasized" width ="200px" press="buttonPressed" visible="{=!${view>/buttonClicked}}"/>
 								</HBox>
 							</l:content>
 						</l:VerticalLayout>
